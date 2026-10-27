@@ -111,12 +111,9 @@ User's question:
 
         return response.text or "Sorry, no answer was generated."
 
-    except Exception as error:
-        print("Gemini error:", error)
-        return (
-            "Gemini could not respond. Check your API key, model "
-            "availability, API quota, and Render logs."
-        )
+       except Exception as error:
+        print("Gemini error:", repr(error), flush=True)
+        return f"Gemini API error: {error}"
 
 
 CSS = """
