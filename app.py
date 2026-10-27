@@ -6,9 +6,11 @@ import gradio as gr
 from google import genai
 
 # Load the existing crop recommendation model
+print("Loading crop recommendation model...", flush=True)
 saved_data = joblib.load("crop_recommendation_model.pkl")
 model = saved_data["model"]
 feature_columns = saved_data["feature_columns"]
+print("Crop recommendation model loaded successfully.", flush=True)
 
 
 def predict_crop(N, P, K, temperature, humidity, ph, rainfall):
