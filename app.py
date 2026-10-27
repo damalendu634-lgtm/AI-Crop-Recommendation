@@ -214,8 +214,9 @@ with gr.Blocks(
                 ],
                 chatbot=gr.Chatbot(height=430),
                 textbox=gr.Textbox(
-                    placeholder="Type your question...",
-                    lines=2
+                    placeholder="Type your question and press Enter...",
+                    lines=1,
+                    max_lines=1
                 )
             )
 
